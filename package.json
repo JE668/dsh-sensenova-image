@@ -1,0 +1,56 @@
+{
+  "name": "dsh-sensenova-image",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: SenseTime SenseNova U-series image models (sensenova-u1.5-lite / sensenova-u1.5-fast) as DSH tools — text-to-image and image editing, with auto-generated settings page.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "sensenova",
+    "sensetime",
+    "image-generation",
+    "image-editing",
+    "sensenova-u1.5",
+    "text2img",
+    "img2img"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JE668/dsh-sensenova-image.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

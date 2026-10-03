@@ -1,0 +1,25 @@
+# dsh-sensenova-image：商汤 SenseNova U 系列图片生成/编辑工具插件。
+#
+# 安装即注册两个 DSH 工具：
+#   1. sensenova_text2img —— 文生图（POST /v1/images/generations）
+#   2. sensenova_img2img  —— 图片编辑（POST /v1/images/edits）
+#
+# 支持模型：sensenova-u1.5-lite（默认）、sensenova-u1.5-fast
+#
+# API 密钥解析优先级：
+#   1. 环境变量 SENSENOVA_API_KEY
+#   2. 插件 config.apiKey
+#   3. ~/.dsh/.credentials.yaml 中的 SENSENOVA_API_KEY
+#
+# 可选配置（无需配置也能用，前提是密钥已存在于环境变量或凭据中心）：
+#
+#   - id: dsh-sensenova-image
+#     config:
+#       apiKey: sk-xxx            # 可选，直接写在这里
+#       defaultModel: sensenova-u1.5-fast   # 可选，默认 sensenova-u1.5-lite
+#       baseURL: https://token.sensenova.cn/v1  # 可选，默认值
+
+- insert:
+    - id: dsh-sensenova-image
+      name: dsh-sensenova-image
+      config: {}
